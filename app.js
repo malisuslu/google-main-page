@@ -11,4 +11,3 @@ document.addEventListener("mouseup", function(e) {
     document.querySelector('.apps').style.height = "0px";
     document.querySelector('.right-side li:nth-child(3)').setAttribute("aria-expanded", "false");
 }});
-
