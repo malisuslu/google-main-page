@@ -7,6 +7,7 @@
     <meta name="description" content="google-landing-page">
     <meta name="keywords" content="HTML, CSS, learn, coding">
     <meta name="author" content="Ali SOYLU">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>google-landing-page</title>
     <link rel="shortcut icon" href="./images/gfavicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -22,6 +23,8 @@
             <li><a href="https://images.google.com/">Images</a></li>
             <li aria-expanded="false" id="app-menu">
                 <img src="./images/appicon.png" alt="menu icon" id="menu-icon">
+
+                <div class="app-bubble">Google Apps</div>
 
                 <div class="apps">
 
@@ -134,39 +137,70 @@
 
                     </ul>
 
-                    <div class="other_products">
+                    <div class="other-products">
                         <a href="https://www.google.com.tr/intl/en/about/products">More From Google</a>
                     </div> 
 
                 </div>
 
-
             </li>
             <li><a href="https://accounts.google.com/servicelogin">Sign In</a></li>
+        </ul>
     </nav>
 
     <div class="container">
+
         <div class="header">
             <h1><img src="./images/googlelogo.png" alt="google logo"></h1>
-        </div>
+        </div> <!-- end of header -->
+
         <div class="search-box">
             <form action="https://www.google.com/search" method="GET">
+
                 <div class="search-bar">
-                    <img src="./images/Magnifying_glass_icon.png" alt="mglass icon">
-                    <input type="text" name="q" placeholder="Search Google" autocomplete="off" autofocus>
-                    <img src="./images/google_microphone.png" alt="mic icon">
+                    <img id="glass-icon" src="./images/Magnifying_glass_icon.png" alt="mglass icon">
+                    <input type="search" name="q" id="search-input" placeholder="Search Google" autofocus autocomplete="off">
+                    <div class="tooltip">
+                        <img id="mic-icon" src="./images/google_microphone.png" alt="mic icon">
+                        <span class="tooltiptext">Search by voice</span>
+                    </div>
                 </div>
+
+                <div class="suggestions">
+
+                    <div class="seperator">
+                        <div class="seperator-inner"></div>
+                    </div>
+
+                    <ul class="sugg-box" id="search-results">
+
+                    </ul>
+
+                    <div class="buttons">
+                        <button type="submit">Google Search</button>
+                        <button type="submit" formaction="#">I'm Feeling Lucky</button>
+                    </div>
+
+                    <div class="report"> 
+                        <a href="https://www.google.com/#duf3=0,duf3-46,d3sbx">Report inappropirate predictions</a>
+                    </div> 
+                </div> <!-- end of suggestions -->
+
                 <div class="buttons">
                     <button type="submit">Google Search</button>
                     <button type="submit" formaction="#">I'm Feeling Lucky</button>
                 </div>
-            </form>
-        </div>
+
+            </form>  <!-- end of form -->
+
+        </div> <!-- end of search box -->
     
         <div class="footer">
             <p>Other languages you can use Google <a href="#">English</a></p>
-        </div>
+        </div> <!-- end of footer -->
 
-        <script src="app.js"></script>
+    </div>  <!-- end of container -->
+
+    <script src="app.js"></script>
 </body>
 </html>
