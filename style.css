@@ -477,7 +477,7 @@ button:hover {
     width: auto;
 }
 
-.other_products > a:hover {
+.other-products > a:hover {
     background-color: #f8fbff;
     border-color: #cce0fc;
 }
