@@ -219,14 +219,10 @@ document.querySelectorAll('.luck-button').forEach(button => {
         xhr.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 let html = xhr.responseText;
-                console.log(html);
                 let results = html.match(/<a href="https(.*?)"/g);
-                console.log(results);
                 let result = results[2];
-                console.log(result);
                 let link = result.slice(9, -1);
-                console.log(link);
-                window.open(link, '_blank');
+                window.location.href = link;
             }
         }
     }
