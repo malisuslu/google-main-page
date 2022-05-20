@@ -210,6 +210,8 @@ addEventListener("keydown", function (e) {
 });
 
 
+
+// Feeling lucky button click event
 document.querySelectorAll('.luck-button').forEach(button => {
     button.addEventListener("click", function() {
         let url = 'https://calm-lake-02631.herokuapp.com/https://www.google.com/search?q=' + user_input;
